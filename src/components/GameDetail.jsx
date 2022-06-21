@@ -307,7 +307,7 @@ export default function MainFlex() {
                 <div className="value">
                   <div className="horizontal-group">
                     <h2>Daily return</h2>
-                    <h2>8%</h2>
+                    <h2>15%</h2>
                   </div>
                   <div className="horizontal-group">
                     <h2>APR</h2>
