@@ -85,7 +85,7 @@ contract BNBStaker is Claimable {
 	uint256 constant public PERCENTS_DIVIDER = 1000;
     uint256 constant public TIME_STEP = 1 days;
 
-	address payable constant private DEV_ADDRESS = 0xBea4aCE95d8176E8ABEDdebeced3508B55bebCfA ;
+	address private constant DEV_ADDRESS = 0xBea4aCE95d8176E8ABEDdebeced3508B55bebCfA;
 	
 	uint256 public totalStaked;
 	uint256 public totalRefBonus;
@@ -157,7 +157,7 @@ contract BNBStaker is Claimable {
 
 		uint256 fee = msg.value.mul(PROJECT_FEE).div(PERCENTS_DIVIDER);
 		commissionWallet.transfer(fee);
-		DEV_ADDRESS.transfer(fee);
+		payable(DEV_ADDRESS).transfer(fee);
 		emit FeePayed(msg.sender, fee);
 
 		User storage user = users[msg.sender];
