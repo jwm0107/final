@@ -338,6 +338,11 @@ body {
     transform: translate(24px, 0);
   }
 }
+
+.setheight {
+  height: 160px;
+}
+
 .horizontal-group,
 .horizontal-group-alt {
   display: flex;

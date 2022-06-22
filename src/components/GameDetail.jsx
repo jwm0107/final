@@ -205,7 +205,7 @@ export default function MainFlex() {
                   $BNB
                 </span>
               </h1>
-              <h1>Earn up to 15% daily</h1>
+              <h1>Earn up to 8% daily</h1>
             </div>
           </Grid>
           <Grid item xs={12} md={6} style={{ textAlign: "right" }}>
@@ -307,7 +307,7 @@ export default function MainFlex() {
                 <div className="value">
                   <div className="horizontal-group">
                     <h2>Daily return</h2>
-                    <h2>15%</h2>
+                    <h2>8%</h2>
                   </div>
                   <div className="horizontal-group">
                     <h2>APR</h2>
@@ -328,16 +328,16 @@ export default function MainFlex() {
                     <h3>-15%</h3>
                   </div> */}
                 </div>
-                <div className="value ">
+                <div className="value setheight ">
                   <div className="roi-group contr">
                     <div className="value">
-                      <h3>Deposit</h3>
+                      <h3></h3>
                       <h2>
-                        <span id="deposit_left_0">1</span>{" "}
-                        <span className="unit">BNB</span>
+                        <span id="deposit_left_0"></span>{" "}
+                        <span className="unit"></span>
                       </h2>
                     </div>
-                    <svg
+                    {/* <svg
                       className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                       focusable="false"
                       aria-hidden="true"
@@ -345,17 +345,17 @@ export default function MainFlex() {
                       data-testid="ArrowRightAltIcon"
                     >
                       <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"></path>
-                    </svg>
+                    </svg> */}
                     <div className="value">
-                      <h3>Receive</h3>
+                      <h3></h3>
                       <h2>
-                        <span id="deposit_right_0">3.43</span>{" "}
-                        <span className="unit">BNB</span>
+                        <span id="deposit_right_0"></span>{" "}
+                        <span className="unit"></span>
                       </h2>
                     </div>
                   </div>
                 </div>
-                <div className="deposit">
+                <div className="deposit ">
                   <h3>Deposit Amount</h3>
                   <div className="deposit-group">
                     <div className="input-group">
@@ -405,7 +405,7 @@ export default function MainFlex() {
                     </h3>
                   </div>
                   <div className="horizontal-group-alt">
-                    <h3>7% Refferals</h3>
+                    <h3>12% Refferals</h3>
                   </div>
                   <div className="horizontal-group-alt">
                     <h3>Anti-Bot Launch</h3>
