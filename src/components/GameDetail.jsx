@@ -205,7 +205,7 @@ export default function MainFlex() {
                   $BNB
                 </span>
               </h1>
-              <h1>Earn up to 8% daily</h1>
+              <h1>Earn up to 15% daily</h1>
             </div>
           </Grid>
           <Grid item xs={12} md={6} style={{ textAlign: "right" }}>
