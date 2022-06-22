@@ -329,14 +329,14 @@ export default function MainFlex() {
                   </div> */}
                 </div>
                 <div className="value setheight ">
-                  <div className="roi-group contr">
+                  {/* <div className="roi-group contr">
                     <div className="value">
                       <h3></h3>
                       <h2>
                         <span id="deposit_left_0"></span>{" "}
                         <span className="unit"></span>
                       </h2>
-                    </div>
+                    </div> */}
                     {/* <svg
                       className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                       focusable="false"
@@ -346,14 +346,14 @@ export default function MainFlex() {
                     >
                       <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"></path>
                     </svg> */}
-                    <div className="value">
+                    {/* <div className="value">
                       <h3></h3>
                       <h2>
                         <span id="deposit_right_0"></span>{" "}
                         <span className="unit"></span>
                       </h2>
-                    </div>
-                  </div>
+                    </div> */}
+                  {/* </div> */}
                 </div>
                 <div className="deposit ">
                   <h3>Deposit Amount</h3>
